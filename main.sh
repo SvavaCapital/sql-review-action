@@ -31,7 +31,7 @@ done
 
 # Use BB_SQL_API from environment as default value.
 # Users can deploy their own SQL Service from https://github.com/Bytebase/Bytebase/blob/main/Dockerfile.sql-service, thus they can get their own SQL check API and inject it into the repo's environment
-API_URL=$BB_SQL_API
+API_URL=http://bytebase-sql-service.shared.svc.cluster.local:80/v1/advise
 if [ -z $API_URL ]
 then
     API_URL=https://sql.bytebase.com/v1/advise
